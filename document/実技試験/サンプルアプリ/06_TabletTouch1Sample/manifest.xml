@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.0.0" uuid="TabletTouch1Sample">
+ <names>
+  <name lang="en_US">TabletTouch1Sample</name>
+ </names>
+ <descriptions>
+  <description lang="ja_JP">風邪をひいたペッパーを治してあげるゲームです。
+
+
+</description>
+ </descriptions>
+ <supportedLanguages>
+  <language>ja_JP</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+  <language>ja_JP</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path=".">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <names>
+    <name lang="en_US">Sample Press twice</name>
+   </names>
+   <tags>
+    <tag lang="ja_JP">launcher</tag>
+   </tags>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+ <requirements>
+  <naoqiRequirement maxVersion="2" minVersion="2.0"/>
+  <robotRequirement model="JULIETTE_Y20"/>
+ </requirements>
+</package>
