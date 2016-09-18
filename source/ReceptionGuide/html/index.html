@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+    <title>Pepper受付係</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="/libs/qimessaging/2/qimessaging.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body onLoad="startSession();">
+    <div class="container">
+        <div id="choice" class="panel inactive">
+            <div class="button-container">
+                <div class="button" id="yes">
+                    はい
+                    <div class="button_sub">(訪問先QRコードをお持ちの方)</div>
+                </div>
+            </div>
+            <div class="button-container">
+                <div class="button" id="no">
+                    いいえ
+                    <div class="button_sub">(訪問先QRコードをお忘れの方/<br/>新規のご訪問の方)</div>
+                </div>
+            </div>
+        </div>
+        <div id="camera" class="panel inactive">
+            <div class="canvas-container">
+                <div class="canvas-background">
+                    <canvas id="canvas" width="80" height="60"></canvas>
+                </div>
+            </div>
+        </div>
+        <div id="greeting" class="panel inactive">
+            <div id="greetingimages" class="image-container">
+                <span id="greetingloading">
+                    読み込み中...
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="abort-container inactive" id="common">
+        <div class="abort-button" id="abort">
+            中断
+        </div>
+    </div>
+  </body>
+</html>
