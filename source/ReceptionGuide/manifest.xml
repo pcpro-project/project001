@@ -25,7 +25,7 @@
   </behaviorContent>
  </contents>
  <requirements>
-  <naoqiRequirement maxVersion="2" minVersion="2.4"/>
+  <naoqiRequirement minVersion="2.4" maxVersion="2"/>
   <robotRequirement model="JULIETTE_Y20"/>
  </requirements>
 </package>
