@@ -5175,43 +5175,20 @@ class MyClass(GeneratedClass):
         #put clean-up code here
         pass
 
-    def onInput_onStart(self, appointmentId):
-        url = self.getParameter("URL")
-        if url.endswith("/"):
-            url = url[:-1]
-        self.logger.info("Base URL: %s" % url)
+    def onInput_onStart(self, qrCode):
 
-        import urllib2
         import json
-        import os
-        response = urllib2.urlopen('%s/api/%s/checkin' % (url, appointmentId))
-        responseJson = json.load(response)
 
-        self.logger.info("%s" % (str(responseJson)))
-        greeting = responseJson['greeting']
-        response = urllib2.urlopen(url + greeting['image'])
-        mimeType = response.info().getheader('Content-Type')
-        self.logger.info("Content-Type: %s" % str(mimeType))
-        saveFilename = 'image' + self.EXTENSIONS[mimeType]
-        saveDir = os.path.join(self.behaviorAbsolutePath(), '../html/')
-        with open(os.path.join(saveDir, saveFilename), "wb") as f:
-            f.write(response.read())
+        #データ設定
+        list = json.loads('{"id001":{"image":"image.png","name":"商品００１"}"id002":{"image":"image.png","name":"商品００２"}}')
 
-        if 'solitaries' in responseJson:
-            solitaryData = os.path.expanduser(self.getParameter('SolitaryDataPath'))
-            if not os.path.isdir(solitaryData):
-                os.makedirs(solitaryData)
-            for index, g in enumerate(responseJson['solitaries']):
-                response = urllib2.urlopen(url + g['image'])
-                mimeType = response.info().getheader('Content-Type')
-                filename = 'image-%d%s' % (index, self.EXTENSIONS[mimeType])
-                g['image'] = filename
-                with open(os.path.join(solitaryData, filename), "wb") as f:
-                    f.write(response.read())
-            with open(os.path.join(solitaryData, 'data.json'), 'w') as f:
-                json.dump(responseJson['solitaries'], f)
+        if qrCode in list:
+            data = list[qrCode]
+            speech = "商品、%sの在庫が確認できました。" % data['name']
+            self.onStopped([data["image"], speech])
+        else:
+            self.onError("not exist:%s　" % qrCode)
 
-        self.onStopped([saveFilename, greeting['speech'].encode("utf8")])
 
     def onInput_onStop(self):
         self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
@@ -9564,7 +9541,7 @@ class MyClass(GeneratedClass):
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
 			"Italian" : " Ciao ",
-			"Japanese" : " \\pau=500\\申し訳ございません。在庫が確認できませんでした。\\pau=700\\今一度、受け取り店配達完了メー ルをご確認ください。 ",
+			"Japanese" : " \\pau=500\\申し訳ございません。在庫が確認できませんでした。\\pau=700\\もう一度、受け取り店配達完了メー ルをご確認ください。 ",
 			"Korean" : " 안녕하세요 ",
 			"Dutch" : " Hallo ",
 			"Norwegian" : "  ",
@@ -9614,7 +9591,7 @@ class MyClass(GeneratedClass):
                                                                                                 <![CDATA[Ciao]]>
 </italian>
                                                                                             <japanese>
-                                                                                                <![CDATA[\pau=500\申し訳ございません。在庫が確認できませんでした。\pau=700\今一度、受け取り店配達完了メー ルをご確認ください。]]>
+                                                                                                <![CDATA[\pau=500\申し訳ございません。在庫が確認できませんでした。\pau=700\もう一度、受け取り店配達完了メー ルをご確認ください。]]>
 </japanese>
                                                                                             <korean>
                                                                                                 <![CDATA[안녕하세요]]>
@@ -9950,7 +9927,7 @@ class MyClass(GeneratedClass):
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
 			"Italian" : " Ciao ",
-			"Japanese" : " 在庫が確認できました。\\pau=700\\あちらのレジで商品の受け取りを行ってください。 ",
+			"Japanese" : " \\pau=700\\あちらのレジで商品の受け取りを行ってください。 ",
 			"Korean" : " 안녕하세요 ",
 			"Dutch" : " Hallo ",
 			"Norwegian" : "  ",
@@ -10000,7 +9977,7 @@ class MyClass(GeneratedClass):
                                                                                                 <![CDATA[Ciao]]>
 </italian>
                                                                                             <japanese>
-                                                                                                <![CDATA[在庫が確認できました。\pau=700\あちらのレジで商品の受け取りを行ってください。]]>
+                                                                                                <![CDATA[\pau=700\あちらのレジで商品の受け取りを行ってください。]]>
 </japanese>
                                                                                             <korean>
                                                                                                 <![CDATA[안녕하세요]]>
@@ -10847,6 +10824,98 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
+                                            <Box name="Get Mood" id="6" localization="8" tooltip='This box returns the focused user&apos;s emotional reaction during the next few seconds after this call.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;The parameter &quot;Event label&quot; is the name of the event you want to analyse with user&apos;s mood information.&#x0A;For example: &quot;joke/toto&quot;&#x0A;&#x0A;If the parameter &quot;Send to cloud&quot; is checked, this box will automatically send the output to cloud, tagged with the label given above.&#x0A;&#x0A;[WARNING] It is recommended to connect the &quot;Preload Mood&quot; box before using this one to ensure its recognition performance' x="690" y="391">
+                                                <bitmap>media/images/box/interaction/mood.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        try:
+            self.mood = ALProxy("ALMood")
+        except Exception as e:
+            raise RuntimeError(str(e) + "Make sure you're not connected to a virtual robot." )
+        try:
+            self.appsAnalytics = ALProxy("ALAppsAnalytics")
+            self.appsAnalyticsPresent = True
+        except:
+            self.appsAnalyticsPresent = False
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        reaction = self.mood.getEmotionalReaction()
+        self.onStopped(reaction)
+        if self.getParameter("Send to cloud"):
+            if self.appsAnalyticsPresent:
+                self.appsAnalytics.push_mood(self.getParameter("Event label"),reaction)
+            else:
+                print "ALAppsAnalytics is not present on the robot."
+        moodSubscribers = self.mood.getSubscribersInfo()
+        if reaction == "unknown":
+            if not any(['Active' in sub for sub in moodSubscribers]):
+                    self.logger.warning("ALMood is not in Active mode. The emotional data may not be sufficient. Use the Preload Mood box for best performance.")
+
+    def onInput_onStop(self):
+        pass]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="A mood scope starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="" id="3" />
+                                                <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip='Returns the emotional reaction found after a few seconds.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;' id="4" />
+                                                <Parameter name="Event label" inherits_from_parent="0" content_type="3" value="In stock" default_value="joke_1" custom_choice="0" tooltip="Label of the event you want to analyse with user mood information." id="5" />
+                                                <Parameter name="Send to cloud" inherits_from_parent="0" content_type="0" value="1" default_value="0" tooltip="If checked, this box will automatically send the output to cloud, tagged with the label given above." id="6" />
+                                            </Box>
+                                            <Box name="Get Mood (1)" id="9" localization="8" tooltip='This box returns the focused user&apos;s emotional reaction during the next few seconds after this call.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;The parameter &quot;Event label&quot; is the name of the event you want to analyse with user&apos;s mood information.&#x0A;For example: &quot;joke/toto&quot;&#x0A;&#x0A;If the parameter &quot;Send to cloud&quot; is checked, this box will automatically send the output to cloud, tagged with the label given above.&#x0A;&#x0A;[WARNING] It is recommended to connect the &quot;Preload Mood&quot; box before using this one to ensure its recognition performance' x="717" y="279">
+                                                <bitmap>media/images/box/interaction/mood.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        try:
+            self.mood = ALProxy("ALMood")
+        except Exception as e:
+            raise RuntimeError(str(e) + "Make sure you're not connected to a virtual robot." )
+        try:
+            self.appsAnalytics = ALProxy("ALAppsAnalytics")
+            self.appsAnalyticsPresent = True
+        except:
+            self.appsAnalyticsPresent = False
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        reaction = self.mood.getEmotionalReaction()
+        self.onStopped(reaction)
+        if self.getParameter("Send to cloud"):
+            if self.appsAnalyticsPresent:
+                self.appsAnalytics.push_mood(self.getParameter("Event label"),reaction)
+            else:
+                print "ALAppsAnalytics is not present on the robot."
+        moodSubscribers = self.mood.getSubscribersInfo()
+        if reaction == "unknown":
+            if not any(['Active' in sub for sub in moodSubscribers]):
+                    self.logger.warning("ALMood is not in Active mode. The emotional data may not be sufficient. Use the Preload Mood box for best performance.")
+
+    def onInput_onStop(self):
+        pass]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="A mood scope starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="" id="3" />
+                                                <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip='Returns the emotional reaction found after a few seconds.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;' id="4" />
+                                                <Parameter name="Event label" inherits_from_parent="0" content_type="3" value="Out of stock" default_value="joke_1" custom_choice="0" tooltip="Label of the event you want to analyse with user mood information." id="5" />
+                                                <Parameter name="Send to cloud" inherits_from_parent="0" content_type="0" value="1" default_value="0" tooltip="If checked, this box will automatically send the output to cloud, tagged with the label given above." id="6" />
+                                            </Box>
                                             <Link inputowner="4" indexofinput="2" outputowner="3" indexofoutput="5" />
                                             <Link inputowner="3" indexofinput="2" outputowner="2" indexofoutput="6" />
                                             <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
@@ -10860,6 +10929,8 @@ class MyClass(GeneratedClass):
                                             <Link inputowner="0" indexofinput="3" outputowner="8" indexofoutput="3" />
                                             <Link inputowner="0" indexofinput="3" outputowner="2" indexofoutput="3" />
                                             <Link inputowner="8" indexofinput="2" outputowner="3" indexofoutput="4" />
+                                            <Link inputowner="9" indexofinput="2" outputowner="1" indexofoutput="3" />
+                                            <Link inputowner="6" indexofinput="2" outputowner="5" indexofoutput="3" />
                                         </Diagram>
                                     </BehaviorKeyframe>
                                 </BehaviorLayer>

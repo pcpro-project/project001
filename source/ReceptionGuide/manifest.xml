@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="receptionguide-74ef08" version="1.0.0">
+<package version="1.0.0" uuid="receptionguide-74ef08">
  <names>
   <name lang="en_US">ReceptionGuide</name>
   <name lang="ja_JP">商品受け取りご案内</name>
