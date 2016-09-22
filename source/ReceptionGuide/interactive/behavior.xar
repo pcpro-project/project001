@@ -10574,7 +10574,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="Get Mood" id="6" localization="8" tooltip='This box returns the focused user&apos;s emotional reaction during the next few seconds after this call.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;The parameter &quot;Event label&quot; is the name of the event you want to analyse with user&apos;s mood information.&#x0A;For example: &quot;joke/toto&quot;&#x0A;&#x0A;If the parameter &quot;Send to cloud&quot; is checked, this box will automatically send the output to cloud, tagged with the label given above.&#x0A;&#x0A;[WARNING] It is recommended to connect the &quot;Preload Mood&quot; box before using this one to ensure its recognition performance' x="690" y="391">
+                                            <Box name="Get Mood" id="6" localization="8" tooltip='This box returns the focused user&apos;s emotional reaction during the next few seconds after this call.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;The parameter &quot;Event label&quot; is the name of the event you want to analyse with user&apos;s mood information.&#x0A;For example: &quot;joke/toto&quot;&#x0A;&#x0A;If the parameter &quot;Send to cloud&quot; is checked, this box will automatically send the output to cloud, tagged with the label given above.&#x0A;&#x0A;[WARNING] It is recommended to connect the &quot;Preload Mood&quot; box before using this one to ensure its recognition performance' x="676" y="339">
                                                 <bitmap>media/images/box/interaction/mood.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -10620,7 +10620,7 @@ class MyClass(GeneratedClass):
                                                 <Parameter name="Event label" inherits_from_parent="0" content_type="3" value="ReceptionGuide/interactive/InStock" default_value="joke_1" custom_choice="0" tooltip="Label of the event you want to analyse with user mood information." id="5" />
                                                 <Parameter name="Send to cloud" inherits_from_parent="0" content_type="0" value="1" default_value="0" tooltip="If checked, this box will automatically send the output to cloud, tagged with the label given above." id="6" />
                                             </Box>
-                                            <Box name="Get Mood (1)" id="9" localization="8" tooltip='This box returns the focused user&apos;s emotional reaction during the next few seconds after this call.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;The parameter &quot;Event label&quot; is the name of the event you want to analyse with user&apos;s mood information.&#x0A;For example: &quot;joke/toto&quot;&#x0A;&#x0A;If the parameter &quot;Send to cloud&quot; is checked, this box will automatically send the output to cloud, tagged with the label given above.&#x0A;&#x0A;[WARNING] It is recommended to connect the &quot;Preload Mood&quot; box before using this one to ensure its recognition performance' x="717" y="279">
+                                            <Box name="Get Mood (1)" id="9" localization="8" tooltip='This box returns the focused user&apos;s emotional reaction during the next few seconds after this call.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;The parameter &quot;Event label&quot; is the name of the event you want to analyse with user&apos;s mood information.&#x0A;For example: &quot;joke/toto&quot;&#x0A;&#x0A;If the parameter &quot;Send to cloud&quot; is checked, this box will automatically send the output to cloud, tagged with the label given above.&#x0A;&#x0A;[WARNING] It is recommended to connect the &quot;Preload Mood&quot; box before using this one to ensure its recognition performance' x="667" y="203">
                                                 <bitmap>media/images/box/interaction/mood.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -10669,8 +10669,6 @@ class MyClass(GeneratedClass):
                                             <Link inputowner="4" indexofinput="2" outputowner="3" indexofoutput="5" />
                                             <Link inputowner="3" indexofinput="2" outputowner="2" indexofoutput="6" />
                                             <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
-                                            <Link inputowner="0" indexofinput="3" outputowner="5" indexofoutput="3" />
-                                            <Link inputowner="0" indexofinput="3" outputowner="1" indexofoutput="3" />
                                             <Link inputowner="8" indexofinput="2" outputowner="2" indexofoutput="4" />
                                             <Link inputowner="7" indexofinput="2" outputowner="2" indexofoutput="5" />
                                             <Link inputowner="1" indexofinput="2" outputowner="4" indexofoutput="3" />
@@ -10681,6 +10679,8 @@ class MyClass(GeneratedClass):
                                             <Link inputowner="8" indexofinput="2" outputowner="3" indexofoutput="4" />
                                             <Link inputowner="9" indexofinput="2" outputowner="1" indexofoutput="3" />
                                             <Link inputowner="6" indexofinput="2" outputowner="5" indexofoutput="3" />
+                                            <Link inputowner="0" indexofinput="3" outputowner="9" indexofoutput="4" />
+                                            <Link inputowner="0" indexofinput="3" outputowner="6" indexofoutput="4" />
                                         </Diagram>
                                     </BehaviorKeyframe>
                                 </BehaviorLayer>
