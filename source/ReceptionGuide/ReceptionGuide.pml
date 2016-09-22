@@ -11,6 +11,8 @@
         <File name="main" src="html/main.js" />
         <File name="logo" src="html/logo.png" />
         <File name="icon" src="icon.png" />
+        <File name="id001" src="html/id001.png" />
+        <File name="id002" src="html/id002.png" />
     </Resources>
     <Topics />
     <IgnoredPaths />
