@@ -28,8 +28,8 @@
                             <Timeline enable="0">
                                 <BehaviorLayer name="behavior_layer1">
                                     <BehaviorKeyframe name="keyframe1" index="1">
-                                        <Diagram>
-                                            <Box name="Prepare Tablet" id="8" localization="8" tooltip="こちらに概要を記入" x="469" y="76">
+                                        <Diagram scale="100">
+                                            <Box name="Prepare Tablet" id="8" localization="8" tooltip="こちらに概要を記入" x="521" y="78">
                                                 <bitmap>media/images/box/box-diagram.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -203,8 +203,8 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="init" id="1" localization="8" tooltip="" x="234" y="91">
-                                                <bitmap>media/images/box/box-python-script.png</bitmap>
+                                            <Box name="Stop Alife Motion" id="5" localization="8" tooltip="Ver.2.0.0&#x0A;This box is to set ALife&apos;s breathing, Basic Awareness, Expressive Listening and Blinkings to off.&#x0A;[option]&#x0A;● Background Strategy&#x0A;Check to stop Alife breathing and Idle Posture.&#x0A;&#x0A;● Expressive Listening&#x0A;Check to stop Expressive motion when pepper listening.&#x0A;&#x0A;● Basic Awareness&#x0A;Check to stop Basic Awareness.&#x0A;&#x0A;● Autonomous Blinking&#x0A;Check to stop Pepper&apos;s Blinking" x="277" y="80">
+                                                <bitmap>media/images/box/box-script.png</bitmap>
                                                 <script language="4">
                                                     <content>
                                                         <![CDATA[class MyClass(GeneratedClass):
@@ -288,15 +288,15 @@ class MyClass(GeneratedClass):
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
                                                 <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
-                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="ボックスBehaviorの終了時に信号を送る。" id="4" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
                                                 <Parameter name="Background Strategy" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="" id="5" />
                                                 <Parameter name="Expressive Listening" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="" id="6" />
                                                 <Parameter name="Basic Awareness" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="" id="7" />
                                                 <Parameter name="Autonomous Blinking" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="" id="8" />
                                             </Box>
                                             <Link inputowner="0" indexofinput="3" outputowner="8" indexofoutput="4" />
-                                            <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
-                                            <Link inputowner="8" indexofinput="2" outputowner="1" indexofoutput="4" />
+                                            <Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                            <Link inputowner="8" indexofinput="2" outputowner="5" indexofoutput="4" />
                                         </Diagram>
                                     </BehaviorKeyframe>
                                 </BehaviorLayer>
@@ -316,7 +316,7 @@ class MyClass(GeneratedClass):
                                 <BehaviorLayer name="behavior_layer1">
                                     <BehaviorKeyframe name="keyframe1" index="1">
                                         <Diagram scale="100">
-                                            <Box name="_QRコード有無" id="2" localization="8" tooltip="QRコードの有無を訊ねる" x="57" y="45">
+                                            <Box name="_QRコード有無" id="2" localization="8" tooltip="QRコードの有無を訊ねる" x="95" y="487">
                                                 <bitmap>media/images/box/box-diagram.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -325,15 +325,15 @@ class MyClass(GeneratedClass):
                                                 </script>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
-                                                <Output name="onTimeout" type="1" type_size="1" nature="1" inner="0" tooltip="" id="3" />
-                                                <Output name="onAbort" type="1" type_size="1" nature="1" inner="0" tooltip="" id="4" />
-                                                <Output name="onNo" type="1" type_size="1" nature="1" inner="0" tooltip="" id="5" />
-                                                <Output name="onYes" type="1" type_size="1" nature="1" inner="0" tooltip="ボックスBehaviorの終了時に信号を送る。" id="6" />
+                                                <Output name="onYes" type="1" type_size="1" nature="1" inner="0" tooltip="ボックスBehaviorの終了時に信号を送る。" id="3" />
+                                                <Output name="onNo" type="1" type_size="1" nature="1" inner="0" tooltip="" id="4" />
+                                                <Output name="onAbort" type="1" type_size="1" nature="1" inner="0" tooltip="" id="5" />
+                                                <Output name="onTimeout" type="1" type_size="1" nature="1" inner="0" tooltip="" id="6" />
                                                 <Timeline enable="0">
                                                     <BehaviorLayer name="behavior_layer1">
                                                         <BehaviorKeyframe name="keyframe1" index="1">
-                                                            <Diagram>
-                                                                <Box name="Tablet YesNo" id="11" localization="8" tooltip="こちらに概要を記入" x="296" y="13">
+                                                            <Diagram scale="84.0896">
+                                                                <Box name="Tablet YesNo" id="11" localization="8" tooltip="こちらに概要を記入" x="370" y="23">
                                                                     <bitmap>media/images/box/box-diagram.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -442,7 +442,7 @@ class MyClass(GeneratedClass):
                                                                         </BehaviorLayer>
                                                                     </Timeline>
                                                                 </Box>
-                                                                <Box name="Multiple Sp Reco." id="12" localization="8" tooltip="こちらに概要を記入" x="277" y="136">
+                                                                <Box name="Multiple Sp Reco." id="12" localization="8" tooltip="こちらに概要を記入" x="392" y="158">
                                                                     <bitmap>media/images/box/box-diagram.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -464,7 +464,7 @@ class MyClass(GeneratedClass):
                                                                     <Timeline enable="0">
                                                                         <BehaviorLayer name="behavior_layer1">
                                                                             <BehaviorKeyframe name="keyframe1" index="1">
-                                                                                <Diagram>
+                                                                                <Diagram scale="84.0896">
                                                                                     <Box name="Speech Reco." id="1" localization="8" tooltip="Recognize a word from a list of words set in the box parameters.&#x0A;&#x0A;V1.1.0&#x0A;" x="522" y="27">
                                                                                         <bitmap>media/images/box/interaction/ear.png</bitmap>
                                                                                         <script language="4">
@@ -849,7 +849,7 @@ class MyClass(GeneratedClass):
                                                                         </BehaviorLayer>
                                                                     </Timeline>
                                                                 </Box>
-                                                                <Box name="Only Once" id="3" localization="8" tooltip="This box&apos;s output is stimulated only the first time the onSignal input is.&#x0A;&#x0A;Note: It is reset when the diagram containing the box is unloaded." x="524" y="50">
+                                                                <Box name="Only Once" id="3" localization="8" tooltip="This box&apos;s output is stimulated only the first time the onSignal input is.&#x0A;&#x0A;Note: It is reset when the diagram containing the box is unloaded." x="734" y="57">
                                                                     <bitmap>media/images/box/loop.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -876,18 +876,25 @@ class MyClass(GeneratedClass):
     def onInput_onSignal3(self):
         if( self.bFirstTime ):
             self.bFirstTime = False
-            self.firstTime3()]]>
+            self.firstTime3()
+
+    def onInput_onSignal4(self):
+        if( self.bFirstTime ):
+            self.bFirstTime = False
+            self.firstTime4()]]>
 </content>
                                                                     </script>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onSignal1" type="1" type_size="1" nature="1" inner="0" tooltip="The signal that must pass only once." id="2" />
                                                                     <Input name="onSignal2" type="1" type_size="1" nature="1" inner="0" tooltip="" id="3" />
                                                                     <Input name="onSignal3" type="1" type_size="1" nature="1" inner="0" tooltip="" id="4" />
-                                                                    <Output name="firstTime1" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent first time the onSignal input is stimulated." id="5" />
-                                                                    <Output name="firstTime2" type="1" type_size="1" nature="2" inner="0" tooltip="" id="6" />
-                                                                    <Output name="firstTime3" type="1" type_size="1" nature="2" inner="0" tooltip="" id="7" />
+                                                                    <Input name="onSignal4" type="1" type_size="1" nature="1" inner="0" tooltip="" id="5" />
+                                                                    <Output name="firstTime1" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent first time the onSignal input is stimulated." id="6" />
+                                                                    <Output name="firstTime2" type="1" type_size="1" nature="2" inner="0" tooltip="" id="7" />
+                                                                    <Output name="firstTime3" type="1" type_size="1" nature="2" inner="0" tooltip="" id="8" />
+                                                                    <Output name="firstTime4" type="1" type_size="1" nature="2" inner="0" tooltip="" id="9" />
                                                                 </Box>
-                                                                <Box name="Wait" id="6" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="317" y="324">
+                                                                <Box name="Wait" id="6" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="407" y="396">
                                                                     <bitmap>media/images/box/wait.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -927,7 +934,7 @@ class MyClass(GeneratedClass):
                                                                     <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="60" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
                                                                     <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
                                                                 </Box>
-                                                                <Box name="_タブレット誘導" id="7" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="502" y="246">
+                                                                <Box name="_タブレット誘導" id="7" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="701" y="339">
                                                                     <bitmap>media/images/box/interaction/say.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -1216,7 +1223,7 @@ class MyClass(GeneratedClass):
                                                                                             </ActuatorList>
                                                                                         </Timeline>
                                                                                     </Box>
-                                                                                    <Box name="n_お辞儀" id="12" localization="8" tooltip="Enter tooltip here" x="276" y="199">
+                                                                                    <Box name="_お辞儀" id="12" localization="8" tooltip="Enter tooltip here" x="276" y="199">
                                                                                         <bitmap>media/images/box/box-diagram.png</bitmap>
                                                                                         <script language="4">
                                                                                             <content>
@@ -1465,7 +1472,7 @@ class MyClass(GeneratedClass):
                                                                     </Timeline>
                                                                     <Resource name="Speech" type="Lock" timeout="0" />
                                                                 </Box>
-                                                                <Box name="_こんにちは (再度)" id="9" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="107" y="293">
+                                                                <Box name="_(リトライ)お持ちですか" id="9" localization="8" tooltip="再度QRコードの有無を尋ねる" x="135" y="383">
                                                                     <bitmap>media/images/box/interaction/say.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -1879,7 +1886,7 @@ class MyClass(GeneratedClass):
                                                                     </Timeline>
                                                                     <Resource name="Speech" type="Lock" timeout="0" />
                                                                 </Box>
-                                                                <Box name="_こんにちは" id="5" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="68" y="42">
+                                                                <Box name="_お持ちですか" id="5" localization="8" tooltip="QRコードの有無を尋ねる" x="68" y="42">
                                                                     <bitmap>media/images/box/interaction/say.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -2317,8 +2324,7 @@ class MyClass(GeneratedClass):
                                                                 </Box>
                                                                 <Link inputowner="3" indexofinput="2" outputowner="11" indexofoutput="7" />
                                                                 <Link inputowner="3" indexofinput="3" outputowner="11" indexofoutput="8" />
-                                                                <Link inputowner="3" indexofinput="4" outputowner="6" indexofoutput="4" />
-                                                                <Link inputowner="0" indexofinput="4" outputowner="3" indexofoutput="7" />
+                                                                <Link inputowner="0" indexofinput="5" outputowner="3" indexofoutput="8" />
                                                                 <Link inputowner="3" indexofinput="2" outputowner="12" indexofoutput="3" />
                                                                 <Link inputowner="3" indexofinput="3" outputowner="12" indexofoutput="4" />
                                                                 <Link inputowner="6" indexofinput="3" outputowner="12" indexofoutput="5" />
@@ -2332,14 +2338,16 @@ class MyClass(GeneratedClass):
                                                                 <Link inputowner="12" indexofinput="2" outputowner="5" indexofoutput="4" />
                                                                 <Link inputowner="6" indexofinput="2" outputowner="5" indexofoutput="4" />
                                                                 <Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" />
-                                                                <Link inputowner="0" indexofinput="6" outputowner="3" indexofoutput="5" />
-                                                                <Link inputowner="0" indexofinput="5" outputowner="3" indexofoutput="6" />
+                                                                <Link inputowner="0" indexofinput="3" outputowner="3" indexofoutput="6" />
+                                                                <Link inputowner="0" indexofinput="4" outputowner="3" indexofoutput="7" />
+                                                                <Link inputowner="3" indexofinput="5" outputowner="6" indexofoutput="4" />
+                                                                <Link inputowner="0" indexofinput="6" outputowner="3" indexofoutput="9" />
                                                             </Diagram>
                                                         </BehaviorKeyframe>
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="_QRコード取得" id="3" localization="8" tooltip="QRコードの提示を促し、QRコードを読み込む" x="204" y="336">
+                                            <Box name="_QRコード取得" id="3" localization="8" tooltip="QRコードの提示を促し、QRコードを読み込む" x="290" y="43">
                                                 <bitmap>media/images/box/box-diagram.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -2349,12 +2357,13 @@ class MyClass(GeneratedClass):
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
                                                 <Input name="ProgrammingPepperSample/AbortPressed" type="0" type_size="1" nature="4" stm_value_name="ProgrammingPepperSample/AbortPressed" inner="1" tooltip="ProgrammingPepperSample/AbortPressed desc" id="3" />
-                                                <Output name="onCanceled" type="1" type_size="1" nature="1" inner="0" tooltip="" id="4" />
-                                                <Output name="onGet" type="3" type_size="1" nature="1" inner="0" tooltip="ボックスBehaviorの終了時に信号を送る。" id="5" />
+                                                <Output name="onGet" type="3" type_size="1" nature="1" inner="0" tooltip="ボックスBehaviorの終了時に信号を送る。" id="4" />
+                                                <Output name="onCanceled" type="1" type_size="1" nature="1" inner="0" tooltip="" id="5" />
+                                                <Output name="onTimeout" type="1" type_size="1" nature="1" inner="0" tooltip="" id="6" />
                                                 <Timeline enable="0">
                                                     <BehaviorLayer name="behavior_layer1">
                                                         <BehaviorKeyframe name="keyframe1" index="1">
-                                                            <Diagram scale="100">
+                                                            <Diagram scale="84.0896">
                                                                 <Box name="Subscribe Camera" id="2" localization="8" tooltip="" x="325" y="58">
                                                                     <bitmap>media/images/box/box-python-script.png</bitmap>
                                                                     <script language="4">
@@ -2496,7 +2505,7 @@ class MyClass(GeneratedClass):
                                                                     <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="120" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
                                                                     <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
                                                                 </Box>
-                                                                <Box name="Wait For Signals" id="10" localization="8" tooltip="Wait for both inputs to be stimulated before stimulating its output." x="1594" y="72">
+                                                                <Box name="Wait For Signals" id="10" localization="8" tooltip="Wait for both inputs to be stimulated before stimulating its output." x="1400" y="53">
                                                                     <bitmap>media/images/box/wait.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -3836,7 +3845,7 @@ class MyClass(GeneratedClass):
                                                                         </BehaviorLayer>
                                                                     </Timeline>
                                                                 </Box>
-                                                                <Box name="Wait For Signals (1)" id="15" localization="8" tooltip="Wait for both inputs to be stimulated before stimulating its output." x="671" y="246">
+                                                                <Box name="Wait For Signals (1)" id="15" localization="8" tooltip="Wait for both inputs to be stimulated before stimulating its output." x="687" y="223">
                                                                     <bitmap>media/images/box/wait.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -5060,7 +5069,7 @@ class MyClass(GeneratedClass):
                                                                         </BehaviorLayer>
                                                                     </Timeline>
                                                                 </Box>
-                                                                <Box name="Only Once (1)" id="20" localization="8" tooltip="This box&apos;s output is stimulated only the first time the onSignal input is.&#x0A;&#x0A;Note: It is reset when the diagram containing the box is unloaded." x="943" y="612">
+                                                                <Box name="Only Once (1)" id="20" localization="8" tooltip="This box&apos;s output is stimulated only the first time the onSignal input is.&#x0A;&#x0A;Note: It is reset when the diagram containing the box is unloaded." x="1106" y="478">
                                                                     <bitmap>media/images/box/loop.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -5074,15 +5083,22 @@ class MyClass(GeneratedClass):
     def onUnload(self):
         self.bFirstTime = True
 
-    def onInput_onSignal(self):
+    def onInput_onSignal1(self):
         if( self.bFirstTime ):
             self.bFirstTime = False
-            self.firstTime()]]>
+            self.firstTime1()
+
+    def onInput_onSignal2(self):
+        if( self.bFirstTime ):
+            self.bFirstTime = False
+            self.firstTime2()]]>
 </content>
                                                                     </script>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
-                                                                    <Input name="onSignal" type="1" type_size="1" nature="1" inner="0" tooltip="The signal that must pass only once." id="2" />
-                                                                    <Output name="firstTime" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent first time the onSignal input is stimulated." id="3" />
+                                                                    <Input name="onSignal1" type="1" type_size="1" nature="1" inner="0" tooltip="The signal that must pass only once." id="2" />
+                                                                    <Input name="onSignal2" type="1" type_size="1" nature="1" inner="0" tooltip="" id="3" />
+                                                                    <Output name="firstTime1" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent first time the onSignal input is stimulated." id="4" />
+                                                                    <Output name="firstTime2" type="1" type_size="1" nature="2" inner="0" tooltip="" id="5" />
                                                                 </Box>
                                                                 <Box name="Raise Status Event" id="21" localization="8" tooltip="開始時に、指定されたkeyに対して入力値を格納します。アンロード時に値unloadedを格納します。" x="500" y="58">
                                                                     <bitmap>media/images/box/sensors/STM.png</bitmap>
@@ -5122,7 +5138,7 @@ class MyClass(GeneratedClass):
                                                                     <Parameter name="key" inherits_from_parent="0" content_type="3" value="ProgrammingPepperSample/PreviewMode" default_value="MyApplication/MyData" custom_choice="0" tooltip="" id="6" />
                                                                     <Parameter name="unloaded" inherits_from_parent="0" content_type="3" value="" default_value="" custom_choice="0" tooltip="アンロード後に設定する値" id="7" />
                                                                 </Box>
-                                                                <Box name="Wait For Signals (2)" id="3" localization="8" tooltip="Wait for both inputs to be stimulated before stimulating its output." x="1577" y="412">
+                                                                <Box name="Wait For Signals (2)" id="3" localization="8" tooltip="Wait for both inputs to be stimulated before stimulating its output." x="1411" y="321">
                                                                     <bitmap>media/images/box/wait.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -5208,34 +5224,35 @@ class MyClass(GeneratedClass):
                                                                 </Box>
                                                                 <Link inputowner="6" indexofinput="2" outputowner="0" indexofoutput="2" />
                                                                 <Link inputowner="2" indexofinput="2" outputowner="6" indexofoutput="3" />
-                                                                <Link inputowner="0" indexofinput="5" outputowner="10" indexofoutput="4" />
+                                                                <Link inputowner="0" indexofinput="4" outputowner="10" indexofoutput="4" />
                                                                 <Link inputowner="10" indexofinput="2" outputowner="13" indexofoutput="3" />
                                                                 <Link inputowner="13" indexofinput="2" outputowner="4" indexofoutput="3" />
                                                                 <Link inputowner="14" indexofinput="3" outputowner="13" indexofoutput="3" />
                                                                 <Link inputowner="7" indexofinput="2" outputowner="15" indexofoutput="4" />
                                                                 <Link inputowner="14" indexofinput="2" outputowner="15" indexofoutput="4" />
                                                                 <Link inputowner="4" indexofinput="2" outputowner="5" indexofoutput="6" />
-                                                                <Link inputowner="20" indexofinput="2" outputowner="7" indexofoutput="4" />
                                                                 <Link inputowner="20" indexofinput="2" outputowner="19" indexofoutput="7" />
                                                                 <Link inputowner="20" indexofinput="2" outputowner="0" indexofoutput="3" />
-                                                                <Link inputowner="14" indexofinput="3" outputowner="20" indexofoutput="3" />
+                                                                <Link inputowner="14" indexofinput="3" outputowner="20" indexofoutput="4" />
                                                                 <Link inputowner="19" indexofinput="2" outputowner="15" indexofoutput="4" />
                                                                 <Link inputowner="1" indexofinput="2" outputowner="6" indexofoutput="3" />
                                                                 <Link inputowner="15" indexofinput="3" outputowner="1" indexofoutput="4" />
                                                                 <Link inputowner="21" indexofinput="2" outputowner="2" indexofoutput="5" />
                                                                 <Link inputowner="15" indexofinput="2" outputowner="21" indexofoutput="4" />
                                                                 <Link inputowner="10" indexofinput="3" outputowner="14" indexofoutput="4" />
-                                                                <Link inputowner="3" indexofinput="3" outputowner="20" indexofoutput="3" />
+                                                                <Link inputowner="3" indexofinput="3" outputowner="20" indexofoutput="4" />
                                                                 <Link inputowner="3" indexofinput="2" outputowner="14" indexofoutput="4" />
-                                                                <Link inputowner="0" indexofinput="4" outputowner="3" indexofoutput="4" />
+                                                                <Link inputowner="0" indexofinput="5" outputowner="3" indexofoutput="4" />
                                                                 <Link inputowner="8" indexofinput="2" outputowner="5" indexofoutput="6" />
                                                                 <Link inputowner="5" indexofinput="2" outputowner="15" indexofoutput="4" />
+                                                                <Link inputowner="20" indexofinput="3" outputowner="7" indexofoutput="4" />
+                                                                <Link inputowner="0" indexofinput="6" outputowner="20" indexofoutput="5" />
                                                             </Diagram>
                                                         </BehaviorKeyframe>
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="_商品有無" id="4" localization="8" tooltip="QRコードを元に商品の有無を確認する" x="356" y="333">
+                                            <Box name="_商品有無      " id="4" localization="8" tooltip="QRコードを元に商品の有無を確認する" x="446" y="40">
                                                 <bitmap>media/images/box/box-diagram.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -5244,8 +5261,8 @@ class MyClass(GeneratedClass):
                                                 </script>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
-                                                <Output name="onFailure" type="1" type_size="1" nature="1" inner="0" tooltip="" id="3" />
-                                                <Output name="onConfirmed" type="1" type_size="1" nature="1" inner="0" tooltip="ボックスBehaviorの終了時に信号を送る。" id="4" />
+                                                <Output name="onConfirmed" type="1" type_size="1" nature="1" inner="0" tooltip="ボックスBehaviorの終了時に信号を送る。" id="3" />
+                                                <Output name="onFailure" type="1" type_size="1" nature="1" inner="0" tooltip="" id="4" />
                                                 <Timeline enable="0">
                                                     <BehaviorLayer name="behavior_layer1">
                                                         <BehaviorKeyframe name="keyframe1" index="1">
@@ -9142,10 +9159,10 @@ class MyClass(GeneratedClass):
                                                                         <Choice value="Debug" />
                                                                     </Parameter>
                                                                 </Box>
-                                                                <Link inputowner="0" indexofinput="3" outputowner="3" indexofoutput="3" />
+                                                                <Link inputowner="0" indexofinput="4" outputowner="3" indexofoutput="3" />
                                                                 <Link inputowner="4" indexofinput="2" outputowner="5" indexofoutput="4" />
                                                                 <Link inputowner="6" indexofinput="2" outputowner="4" indexofoutput="4" />
-                                                                <Link inputowner="0" indexofinput="4" outputowner="6" indexofoutput="4" />
+                                                                <Link inputowner="0" indexofinput="3" outputowner="6" indexofoutput="4" />
                                                                 <Link inputowner="7" indexofinput="2" outputowner="0" indexofoutput="2" />
                                                                 <Link inputowner="2" indexofinput="6" outputowner="7" indexofoutput="3" />
                                                                 <Link inputowner="3" indexofinput="2" outputowner="2" indexofoutput="5" />
@@ -9159,13 +9176,13 @@ class MyClass(GeneratedClass):
                                                                 <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
                                                                 <Link inputowner="8" indexofinput="2" outputowner="1" indexofoutput="3" />
                                                                 <Link inputowner="2" indexofinput="7" outputowner="1" indexofoutput="3" />
-                                                                <Link inputowner="0" indexofinput="3" outputowner="5" indexofoutput="5" />
+                                                                <Link inputowner="0" indexofinput="4" outputowner="5" indexofoutput="5" />
                                                             </Diagram>
                                                         </BehaviorKeyframe>
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="_ありません" id="1" localization="8" tooltip="アプリケーション終了前メッセージ（該当商品無し）" x="518" y="198">
+                                            <Box name="_ありません   " id="1" localization="8" tooltip="終了メッセージ（該当商品無し）" x="563" y="156">
                                                 <bitmap>media/images/box/box-diagram.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -9551,7 +9568,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="_窓口誘導" id="5" localization="8" tooltip="レジ窓口へ誘導する" x="518" y="333">
+                                            <Box name="_窓口誘導   " id="5" localization="8" tooltip="レジ窓口へ誘導する" x="565" y="42">
                                                 <bitmap>media/images/box/box-diagram.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -9892,7 +9909,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="_店員にご用件を" id="7" localization="8" tooltip="アプリケーション終了前メッセージ（対応できない用件）" x="228" y="189">
+                                            <Box name="_店員にご用件を" id="7" localization="8" tooltip="アプリケーション終了前メッセージ（対応できない用件）" x="372" y="353">
                                                 <bitmap>media/images/box/box-diagram.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -10233,7 +10250,99 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="_またご用の際は" id="8" localization="8" tooltip="アプリケーション終了前メッセージ（キャンセル時）" x="391" y="71">
+                                            <Box name="Get Mood" id="6" localization="8" tooltip='This box returns the focused user&apos;s emotional reaction during the next few seconds after this call.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;The parameter &quot;Event label&quot; is the name of the event you want to analyse with user&apos;s mood information.&#x0A;For example: &quot;joke/toto&quot;&#x0A;&#x0A;If the parameter &quot;Send to cloud&quot; is checked, this box will automatically send the output to cloud, tagged with the label given above.&#x0A;&#x0A;[WARNING] It is recommended to connect the &quot;Preload Mood&quot; box before using this one to ensure its recognition performance' x="703" y="40">
+                                                <bitmap>media/images/box/interaction/mood.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        try:
+            self.mood = ALProxy("ALMood")
+        except Exception as e:
+            raise RuntimeError(str(e) + "Make sure you're not connected to a virtual robot." )
+        try:
+            self.appsAnalytics = ALProxy("ALAppsAnalytics")
+            self.appsAnalyticsPresent = True
+        except:
+            self.appsAnalyticsPresent = False
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        reaction = self.mood.getEmotionalReaction()
+        self.onStopped(reaction)
+        if self.getParameter("Send to cloud"):
+            if self.appsAnalyticsPresent:
+                self.appsAnalytics.push_mood(self.getParameter("Event label"),reaction)
+            else:
+                print "ALAppsAnalytics is not present on the robot."
+        moodSubscribers = self.mood.getSubscribersInfo()
+        if reaction == "unknown":
+            if not any(['Active' in sub for sub in moodSubscribers]):
+                    self.logger.warning("ALMood is not in Active mode. The emotional data may not be sufficient. Use the Preload Mood box for best performance.")
+
+    def onInput_onStop(self):
+        pass]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="A mood scope starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="" id="3" />
+                                                <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip='Returns the emotional reaction found after a few seconds.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;' id="4" />
+                                                <Parameter name="Event label" inherits_from_parent="0" content_type="3" value="ReceptionGuide/interactive/InStock" default_value="joke_1" custom_choice="0" tooltip="Label of the event you want to analyse with user mood information." id="5" />
+                                                <Parameter name="Send to cloud" inherits_from_parent="0" content_type="0" value="1" default_value="0" tooltip="If checked, this box will automatically send the output to cloud, tagged with the label given above." id="6" />
+                                            </Box>
+                                            <Box name="Get Mood (1)" id="9" localization="8" tooltip='This box returns the focused user&apos;s emotional reaction during the next few seconds after this call.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;The parameter &quot;Event label&quot; is the name of the event you want to analyse with user&apos;s mood information.&#x0A;For example: &quot;joke/toto&quot;&#x0A;&#x0A;If the parameter &quot;Send to cloud&quot; is checked, this box will automatically send the output to cloud, tagged with the label given above.&#x0A;&#x0A;[WARNING] It is recommended to connect the &quot;Preload Mood&quot; box before using this one to ensure its recognition performance' x="705" y="160">
+                                                <bitmap>media/images/box/interaction/mood.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        try:
+            self.mood = ALProxy("ALMood")
+        except Exception as e:
+            raise RuntimeError(str(e) + "Make sure you're not connected to a virtual robot." )
+        try:
+            self.appsAnalytics = ALProxy("ALAppsAnalytics")
+            self.appsAnalyticsPresent = True
+        except:
+            self.appsAnalyticsPresent = False
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        reaction = self.mood.getEmotionalReaction()
+        self.onStopped(reaction)
+        if self.getParameter("Send to cloud"):
+            if self.appsAnalyticsPresent:
+                self.appsAnalytics.push_mood(self.getParameter("Event label"),reaction)
+            else:
+                print "ALAppsAnalytics is not present on the robot."
+        moodSubscribers = self.mood.getSubscribersInfo()
+        if reaction == "unknown":
+            if not any(['Active' in sub for sub in moodSubscribers]):
+                    self.logger.warning("ALMood is not in Active mode. The emotional data may not be sufficient. Use the Preload Mood box for best performance.")
+
+    def onInput_onStop(self):
+        pass]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="A mood scope starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="" id="3" />
+                                                <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip='Returns the emotional reaction found after a few seconds.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;' id="4" />
+                                                <Parameter name="Event label" inherits_from_parent="0" content_type="3" value="ReceptionGuide/interactive/OutOfStock" default_value="joke_1" custom_choice="0" tooltip="Label of the event you want to analyse with user mood information." id="5" />
+                                                <Parameter name="Send to cloud" inherits_from_parent="0" content_type="0" value="1" default_value="0" tooltip="If checked, this box will automatically send the output to cloud, tagged with the label given above." id="6" />
+                                            </Box>
+                                            <Box name="_一定時間が経過しました" id="10" localization="8" tooltip="終了メッセージ（タイムアウト）" x="631" y="527">
                                                 <bitmap>media/images/box/box-diagram.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -10359,7 +10468,7 @@ class MyClass(GeneratedClass):
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
 			"Italian" : " Ciao ",
-			"Japanese" : " またご用の際は、声をおかけください。 ",
+			"Japanese" : " 一定時間が経過しましたので、ロボアプリを終了させます ",
 			"Korean" : " 안녕하세요 ",
 			"Dutch" : " Hallo ",
 			"Norwegian" : "  ",
@@ -10409,7 +10518,7 @@ class MyClass(GeneratedClass):
                                                                                                 <![CDATA[Ciao]]>
 </italian>
                                                                                             <japanese>
-                                                                                                <![CDATA[またご用の際は、声をおかけください。]]>
+                                                                                                <![CDATA[一定時間が経過しましたので、ロボアプリを終了させます]]>
 </japanese>
                                                                                             <korean>
                                                                                                 <![CDATA[안녕하세요]]>
@@ -10574,119 +10683,370 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="Get Mood" id="6" localization="8" tooltip='This box returns the focused user&apos;s emotional reaction during the next few seconds after this call.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;The parameter &quot;Event label&quot; is the name of the event you want to analyse with user&apos;s mood information.&#x0A;For example: &quot;joke/toto&quot;&#x0A;&#x0A;If the parameter &quot;Send to cloud&quot; is checked, this box will automatically send the output to cloud, tagged with the label given above.&#x0A;&#x0A;[WARNING] It is recommended to connect the &quot;Preload Mood&quot; box before using this one to ensure its recognition performance' x="676" y="339">
-                                                <bitmap>media/images/box/interaction/mood.png</bitmap>
+                                            <Box name="_キャンセルですね" id="11" localization="8" tooltip="終了前メッセージ（キャンセル）" x="627" y="408">
+                                                <bitmap>media/images/box/box-diagram.png</bitmap>
                                                 <script language="4">
                                                     <content>
-                                                        <![CDATA[class MyClass(GeneratedClass):
-    def __init__(self):
-        GeneratedClass.__init__(self)
-
-    def onLoad(self):
-        try:
-            self.mood = ALProxy("ALMood")
-        except Exception as e:
-            raise RuntimeError(str(e) + "Make sure you're not connected to a virtual robot." )
-        try:
-            self.appsAnalytics = ALProxy("ALAppsAnalytics")
-            self.appsAnalyticsPresent = True
-        except:
-            self.appsAnalyticsPresent = False
-
-    def onUnload(self):
-        pass
-
-    def onInput_onStart(self):
-        reaction = self.mood.getEmotionalReaction()
-        self.onStopped(reaction)
-        if self.getParameter("Send to cloud"):
-            if self.appsAnalyticsPresent:
-                self.appsAnalytics.push_mood(self.getParameter("Event label"),reaction)
-            else:
-                print "ALAppsAnalytics is not present on the robot."
-        moodSubscribers = self.mood.getSubscribersInfo()
-        if reaction == "unknown":
-            if not any(['Active' in sub for sub in moodSubscribers]):
-                    self.logger.warning("ALMood is not in Active mode. The emotional data may not be sufficient. Use the Preload Mood box for best performance.")
-
-    def onInput_onStop(self):
-        pass]]>
+                                                        <![CDATA[]]>
 </content>
                                                 </script>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
-                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="A mood scope starts when a signal is received on this input." id="2" />
-                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="" id="3" />
-                                                <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip='Returns the emotional reaction found after a few seconds.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;' id="4" />
-                                                <Parameter name="Event label" inherits_from_parent="0" content_type="3" value="ReceptionGuide/interactive/InStock" default_value="joke_1" custom_choice="0" tooltip="Label of the event you want to analyse with user mood information." id="5" />
-                                                <Parameter name="Send to cloud" inherits_from_parent="0" content_type="0" value="1" default_value="0" tooltip="If checked, this box will automatically send the output to cloud, tagged with the label given above." id="6" />
-                                            </Box>
-                                            <Box name="Get Mood (1)" id="9" localization="8" tooltip='This box returns the focused user&apos;s emotional reaction during the next few seconds after this call.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;The parameter &quot;Event label&quot; is the name of the event you want to analyse with user&apos;s mood information.&#x0A;For example: &quot;joke/toto&quot;&#x0A;&#x0A;If the parameter &quot;Send to cloud&quot; is checked, this box will automatically send the output to cloud, tagged with the label given above.&#x0A;&#x0A;[WARNING] It is recommended to connect the &quot;Preload Mood&quot; box before using this one to ensure its recognition performance' x="667" y="203">
-                                                <bitmap>media/images/box/interaction/mood.png</bitmap>
-                                                <script language="4">
-                                                    <content>
-                                                        <![CDATA[class MyClass(GeneratedClass):
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="ボックスBehaviorの終了時に信号を送る。" id="3" />
+                                                <Timeline enable="0">
+                                                    <BehaviorLayer name="behavior_layer1">
+                                                        <BehaviorKeyframe name="keyframe1" index="1">
+                                                            <Diagram>
+                                                                <Box name="Say" id="1" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="374" y="137">
+                                                                    <bitmap>media/images/box/interaction/say.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[class MyClass(GeneratedClass):
     def __init__(self):
-        GeneratedClass.__init__(self)
+        GeneratedClass.__init__(self, False)
 
     def onLoad(self):
-        try:
-            self.mood = ALProxy("ALMood")
-        except Exception as e:
-            raise RuntimeError(str(e) + "Make sure you're not connected to a virtual robot." )
-        try:
-            self.appsAnalytics = ALProxy("ALAppsAnalytics")
-            self.appsAnalyticsPresent = True
-        except:
-            self.appsAnalyticsPresent = False
+        self.bIsRunning = False
 
     def onUnload(self):
-        pass
+        self.bIsRunning = False
 
     def onInput_onStart(self):
-        reaction = self.mood.getEmotionalReaction()
-        self.onStopped(reaction)
-        if self.getParameter("Send to cloud"):
-            if self.appsAnalyticsPresent:
-                self.appsAnalytics.push_mood(self.getParameter("Event label"),reaction)
-            else:
-                print "ALAppsAnalytics is not present on the robot."
-        moodSubscribers = self.mood.getSubscribersInfo()
-        if reaction == "unknown":
-            if not any(['Active' in sub for sub in moodSubscribers]):
-                    self.logger.warning("ALMood is not in Active mode. The emotional data may not be sufficient. Use the Preload Mood box for best performance.")
+        self.bIsRunning = True
 
     def onInput_onStop(self):
-        pass]]>
+        if( self.bIsRunning ):
+            self.onUnload()
+            self.onStopped()]]>
 </content>
-                                                </script>
-                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
-                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="A mood scope starts when a signal is received on this input." id="2" />
-                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="" id="3" />
-                                                <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip='Returns the emotional reaction found after a few seconds.&#x0A;Values can be:&#x0A;- &quot;positive&quot;&#x0A;- &quot;neutral&quot;&#x0A;- &quot;negative&quot;&#x0A;- &quot;unknown&quot;&#x0A;&#x0A;' id="4" />
-                                                <Parameter name="Event label" inherits_from_parent="0" content_type="3" value="ReceptionGuide/interactive/OutOfStock" default_value="joke_1" custom_choice="0" tooltip="Label of the event you want to analyse with user mood information." id="5" />
-                                                <Parameter name="Send to cloud" inherits_from_parent="0" content_type="0" value="1" default_value="0" tooltip="If checked, this box will automatically send the output to cloud, tagged with the label given above." id="6" />
+                                                                    </script>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                                    <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                                                                    <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                                                                    <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished or stopped." id="4" />
+                                                                    <Parameter name="Voice shaping (%)" inherits_from_parent="0" content_type="1" value="135" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean.' id="5" />
+                                                                    <Parameter name="Speed (%)" inherits_from_parent="0" content_type="1" value="110" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean." id="6" />
+                                                                    <Timeline enable="0">
+                                                                        <BehaviorLayer name="behavior_layer1">
+                                                                            <BehaviorKeyframe name="keyframe1" index="1">
+                                                                                <Diagram>
+                                                                                    <Box name="Say Text" id="2" localization="8" tooltip="Say the text received on its input." x="422" y="65">
+                                                                                        <bitmap>media/images/box/interaction/say.png</bitmap>
+                                                                                        <script language="4">
+                                                                                            <content>
+                                                                                                <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        self.tts = ALProxy('ALTextToSpeech')
+        self.ttsStop = ALProxy('ALTextToSpeech', True) #Create another proxy as wait is blocking if audioout is remote
+
+    def onLoad(self):
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.post.say(str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id, 0)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+</content>
+                                                                                        </script>
+                                                                                        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                                                        <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                                                                                        <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                                                                                        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+                                                                                        <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+                                                                                        <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+                                                                                    </Box>
+                                                                                    <Box name="Localized Text" id="5" localization="8" tooltip="Send on the output the text associated with the robot&apos;s current voice language.&#x0A;You can display and edit the text associated with any language by&#x0A;selecting the language in the combobox.&#x0A;&#x0A;!!Warning!! The text sent on the output is NOT the displayed one but the one&#x0A;associated with the robot&apos;s current voice language." plugin="localizationbox_plugin" x="114" y="68">
+                                                                                        <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+                                                                                        <script language="4">
+                                                                                            <content>
+                                                                                                <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		try: # disable autoBind
+			GeneratedClass.__init__(self, False)
+		except TypeError: # if NAOqi < 1.14
+			GeneratedClass.__init__( self )
+
+		self.tts = ALProxy("ALTextToSpeech")
+		self.sentences = {
+			"Arabic" : " مرحبا ",
+			"Czech" : " Ahoj ",
+			"Danish" : " Hej ",
+			"German" : " Hallo ",
+			"Greek" : "  ",
+			"English" : " Hello ",
+			"Spanish" : " Hola ",
+			"Finnish" : " Hei ",
+			"French" : " Bonjour ",
+			"Italian" : " Ciao ",
+			"Japanese" : " \\rspd=110\\\\vct=135\\キャンセルですネっ？\\pau=200\\またご用の際は、声をおかけください。 ",
+			"Korean" : " 안녕하세요 ",
+			"Dutch" : " Hallo ",
+			"Norwegian" : "  ",
+			"Polish" : " Cześć ",
+			"Brazilian" : " Olá ",
+			"Portuguese" : " Olá ",
+			"Russian" : " Привет ",
+			"Swedish" : " Hallå ",
+			"Turkish" : " Merhaba ",
+			"Chinese" : " 你好 "
+		}
+
+	def onInput_onStart(self):
+		sDefaultLang = self.tts.getLanguage()
+		self.onStopped(self.sentences[sDefaultLang])]]>
+</content>
+                                                                                        </script>
+                                                                                        <pluginContent>
+                                                                                            <arabic>
+                                                                                                <![CDATA[مرحبا]]>
+</arabic>
+                                                                                            <czech>
+                                                                                                <![CDATA[Ahoj]]>
+</czech>
+                                                                                            <danish>
+                                                                                                <![CDATA[Hej]]>
+</danish>
+                                                                                            <german>
+                                                                                                <![CDATA[Hallo]]>
+</german>
+                                                                                            <greek>
+                                                                                                <![CDATA[]]>
+</greek>
+                                                                                            <english>
+                                                                                                <![CDATA[Hello]]>
+</english>
+                                                                                            <spanish>
+                                                                                                <![CDATA[Hola]]>
+</spanish>
+                                                                                            <finnish>
+                                                                                                <![CDATA[Hei]]>
+</finnish>
+                                                                                            <french>
+                                                                                                <![CDATA[Bonjour]]>
+</french>
+                                                                                            <italian>
+                                                                                                <![CDATA[Ciao]]>
+</italian>
+                                                                                            <japanese>
+                                                                                                <![CDATA[\rspd=110\\vct=135\キャンセルですネっ？\pau=200\またご用の際は、声をおかけください。]]>
+</japanese>
+                                                                                            <korean>
+                                                                                                <![CDATA[안녕하세요]]>
+</korean>
+                                                                                            <dutch>
+                                                                                                <![CDATA[Hallo]]>
+</dutch>
+                                                                                            <norwegian>
+                                                                                                <![CDATA[]]>
+</norwegian>
+                                                                                            <polish>
+                                                                                                <![CDATA[Cześć]]>
+</polish>
+                                                                                            <brazilian>
+                                                                                                <![CDATA[Olá]]>
+</brazilian>
+                                                                                            <portuguese>
+                                                                                                <![CDATA[Olá]]>
+</portuguese>
+                                                                                            <russian>
+                                                                                                <![CDATA[Привет]]>
+</russian>
+                                                                                            <swedish>
+                                                                                                <![CDATA[Hallå]]>
+</swedish>
+                                                                                            <turkish>
+                                                                                                <![CDATA[Merhaba]]>
+</turkish>
+                                                                                            <chinese>
+                                                                                                <![CDATA[你好]]>
+</chinese>
+                                                                                            <language>10</language>
+                                                                                        </pluginContent>
+                                                                                        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                                        <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
+                                                                                        <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Data sent when asked." id="3" />
+                                                                                    </Box>
+                                                                                    <Link inputowner="0" indexofinput="4" outputowner="2" indexofoutput="4" />
+                                                                                    <Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                                                                    <Link inputowner="2" indexofinput="2" outputowner="5" indexofoutput="3" />
+                                                                                </Diagram>
+                                                                            </BehaviorKeyframe>
+                                                                        </BehaviorLayer>
+                                                                    </Timeline>
+                                                                    <Resource name="Speech" type="Lock" timeout="0" />
+                                                                </Box>
+                                                                <Box name="Wait For Signals" id="2" localization="8" tooltip="Wait for both inputs to be stimulated before stimulating its output." x="604" y="203">
+                                                                    <bitmap>media/images/box/wait.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.ok = [False]*2
+
+    def onUnload(self):
+        #puts code for box cleanup here
+        ""
+
+    def onStart(self, nInput):
+        self.ok[nInput-1] = True
+        bOutput = True
+        for bOk in self.ok:
+            bOutput = bOutput and bOk
+        if( bOutput ):
+            self.ok = [False]*2
+            self.signalsReceived()
+
+    def onInput_signal1(self):
+        self.onStart(1)
+
+    def onInput_signal2(self):
+        self.onStart(2)]]>
+</content>
+                                                                    </script>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                                    <Input name="signal1" type="1" type_size="1" nature="1" inner="0" tooltip="First signal to wait." id="2" />
+                                                                    <Input name="signal2" type="1" type_size="1" nature="1" inner="0" tooltip="Second signal to wait." id="3" />
+                                                                    <Output name="signalsReceived" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when both inputs have been stimulated." id="4" />
+                                                                </Box>
+                                                                <Box name="n_右手ひろげ" id="13" localization="8" tooltip="Enter tooltip here" x="383" y="265">
+                                                                    <bitmap>media/images/box/box-diagram.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[]]>
+</content>
+                                                                    </script>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                    <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                                    <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                                    <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="ボックス動作の終了時に信号を送る" id="4" />
+                                                                    <Timeline enable="1" fps="25" start_frame="1" end_frame="72" size="72">
+                                                                        <ActuatorList model="">
+                                                                            <ActuatorCurve name="value" actuator="RElbowRoll" mute="0" unit="0">
+                                                                                <Key frame="10" value="74.5" />
+                                                                                <Key frame="18" value="83.939" />
+                                                                                <Key frame="27" value="62.3176" />
+                                                                                <Key frame="45" value="62.3176" />
+                                                                                <Key frame="72" value="30.3223" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RElbowYaw" mute="0" unit="0">
+                                                                                <Key frame="18" value="77.4" />
+                                                                                <Key frame="27" value="98.3484" />
+                                                                                <Key frame="45" value="98.3484" />
+                                                                                <Key frame="72" value="70.5762" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RHand" mute="0" unit="1">
+                                                                                <Key frame="18" value="0.0976" />
+                                                                                <Key frame="27" value="0.996" />
+                                                                                <Key frame="45" value="0.996" />
+                                                                                <Key frame="72" value="0.585237" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RShoulderPitch" mute="0" unit="0">
+                                                                                <Key frame="10" value="58" />
+                                                                                <Key frame="18" value="39.4" />
+                                                                                <Key frame="27" value="23.2058" />
+                                                                                <Key frame="45" value="23.2058" />
+                                                                                <Key frame="72" value="89.9121" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RShoulderRoll" mute="0" unit="0">
+                                                                                <Key frame="18" value="-20.4" />
+                                                                                <Key frame="27" value="-21.9" />
+                                                                                <Key frame="45" value="-21.9" />
+                                                                                <Key frame="72" value="-8.70117" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RWristYaw" mute="0" unit="0">
+                                                                                <Key frame="18" value="42.6" />
+                                                                                <Key frame="27" value="72.0688" />
+                                                                                <Key frame="45" value="72.0688" />
+                                                                                <Key frame="72" value="1.22808" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LElbowRoll" mute="0" unit="0">
+                                                                                <Key frame="72" value="-29.4434" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LElbowYaw" mute="0" unit="0">
+                                                                                <Key frame="72" value="-70.0488" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LHand" mute="0" unit="1">
+                                                                                <Key frame="72" value="0.602812" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LShoulderPitch" mute="0" unit="0">
+                                                                                <Key frame="72" value="89.1211" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LShoulderRoll" mute="0" unit="0">
+                                                                                <Key frame="72" value="7.91015" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LWristYaw" mute="0" unit="0">
+                                                                                <Key frame="72" value="-1.23289" />
+                                                                            </ActuatorCurve>
+                                                                        </ActuatorList>
+                                                                    </Timeline>
+                                                                </Box>
+                                                                <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                                                <Link inputowner="2" indexofinput="2" outputowner="1" indexofoutput="4" />
+                                                                <Link inputowner="0" indexofinput="3" outputowner="2" indexofoutput="4" />
+                                                                <Link inputowner="13" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                                                <Link inputowner="2" indexofinput="3" outputowner="13" indexofoutput="4" />
+                                                            </Diagram>
+                                                        </BehaviorKeyframe>
+                                                    </BehaviorLayer>
+                                                </Timeline>
                                             </Box>
-                                            <Link inputowner="4" indexofinput="2" outputowner="3" indexofoutput="5" />
-                                            <Link inputowner="3" indexofinput="2" outputowner="2" indexofoutput="6" />
+                                            <Link inputowner="4" indexofinput="2" outputowner="3" indexofoutput="4" />
+                                            <Link inputowner="3" indexofinput="2" outputowner="2" indexofoutput="3" />
                                             <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
-                                            <Link inputowner="8" indexofinput="2" outputowner="2" indexofoutput="4" />
-                                            <Link inputowner="7" indexofinput="2" outputowner="2" indexofoutput="5" />
-                                            <Link inputowner="1" indexofinput="2" outputowner="4" indexofoutput="3" />
-                                            <Link inputowner="5" indexofinput="2" outputowner="4" indexofoutput="4" />
-                                            <Link inputowner="0" indexofinput="3" outputowner="7" indexofoutput="3" />
-                                            <Link inputowner="0" indexofinput="3" outputowner="8" indexofoutput="3" />
-                                            <Link inputowner="0" indexofinput="3" outputowner="2" indexofoutput="3" />
-                                            <Link inputowner="8" indexofinput="2" outputowner="3" indexofoutput="4" />
+                                            <Link inputowner="7" indexofinput="2" outputowner="2" indexofoutput="4" />
+                                            <Link inputowner="1" indexofinput="2" outputowner="4" indexofoutput="4" />
+                                            <Link inputowner="5" indexofinput="2" outputowner="4" indexofoutput="3" />
                                             <Link inputowner="9" indexofinput="2" outputowner="1" indexofoutput="3" />
                                             <Link inputowner="6" indexofinput="2" outputowner="5" indexofoutput="3" />
                                             <Link inputowner="0" indexofinput="3" outputowner="9" indexofoutput="4" />
                                             <Link inputowner="0" indexofinput="3" outputowner="6" indexofoutput="4" />
+                                            <Link inputowner="10" indexofinput="2" outputowner="2" indexofoutput="6" />
+                                            <Link inputowner="11" indexofinput="2" outputowner="3" indexofoutput="5" />
+                                            <Link inputowner="0" indexofinput="3" outputowner="11" indexofoutput="3" />
+                                            <Link inputowner="0" indexofinput="3" outputowner="10" indexofoutput="3" />
+                                            <Link inputowner="11" indexofinput="2" outputowner="2" indexofoutput="5" />
+                                            <Link inputowner="10" indexofinput="2" outputowner="3" indexofoutput="6" />
+                                            <Link inputowner="0" indexofinput="3" outputowner="7" indexofoutput="3" />
                                         </Diagram>
                                     </BehaviorKeyframe>
                                 </BehaviorLayer>
                             </Timeline>
                         </Box>
-                        <Box name="Finsh" id="2" localization="8" tooltip="" x="579" y="62">
+                        <Box name="FIN" id="2" localization="8" tooltip="" x="579" y="62">
                             <bitmap>media/images/box/box-diagram.png</bitmap>
                             <script language="4">
                                 <content>
