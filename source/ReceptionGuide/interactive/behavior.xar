@@ -2347,7 +2347,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="_QRコード取得" id="3" localization="8" tooltip="QRコードの提示を促し、QRコードを読み込む" x="290" y="43">
+                                            <Box name="_QRコード取得" id="3" localization="8" tooltip="QRコードの提示を促し、QRコードを読み込む" x="248" y="67">
                                                 <bitmap>media/images/box/box-diagram.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -2653,7 +2653,7 @@ class MyClass(GeneratedClass):
                                                                                         <Output name="onThen" type="1" type_size="1" nature="2" inner="0" tooltip="" id="4" />
                                                                                         <Output name="onElse" type="1" type_size="1" nature="2" inner="0" tooltip="" id="5" />
                                                                                     </Box>
-                                                                                    <Box name="_ランダム" id="10" localization="8" tooltip="こちらに概要を記入" x="537" y="132">
+                                                                                    <Box name="_ランダム案内" id="10" localization="8" tooltip="こちらに概要を記入" x="537" y="132">
                                                                                         <bitmap>media/images/box/interaction/say.png</bitmap>
                                                                                         <script language="4">
                                                                                             <content>
@@ -5252,7 +5252,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="_商品有無      " id="4" localization="8" tooltip="QRコードを元に商品の有無を確認する" x="446" y="40">
+                                            <Box name="_商品有無      " id="4" localization="8" tooltip="QRコードを元に商品の有無を確認する" x="422" y="43">
                                                 <bitmap>media/images/box/box-diagram.png</bitmap>
                                                 <script language="4">
                                                     <content>
