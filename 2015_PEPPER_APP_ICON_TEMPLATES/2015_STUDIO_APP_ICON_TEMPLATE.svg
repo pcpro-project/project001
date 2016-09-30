@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 720 720" enable-background="new 0 0 720 720" xml:space="preserve">
+<g id="BACKGROUND">
+	<g>
+		<g>
+			<path fill="#CCCCCC" d="M82.3,147.3L314.6,13.2c28.1-16.2,62.7-16.2,90.7,0l232.3,134.1c28.1,16.2,45.4,46.2,45.4,78.6v268.3
+				c0,32.4-17.3,62.4-45.4,78.6L405.4,706.8c-28.1,16.2-62.7,16.2-90.7,0L82.3,572.7c-28.1-16.2-45.4-46.2-45.4-78.6V225.9
+				C36.9,193.4,54.2,163.5,82.3,147.3z"/>
+		</g>
+	</g>
+</g>
+<g id="RULERS__x26__INFOS" display="none">
+	<path display="inline" fill="none" stroke="#48C0ED" stroke-width="5" stroke-miterlimit="10" d="M150.7,199.7L325.8,98.6
+		c21.2-12.2,47.2-12.2,68.4,0l175.1,101.1c21.2,12.2,34.2,34.8,34.2,59.2v202.2c0,24.4-13,47-34.2,59.2L394.2,621.4
+		c-21.2,12.2-47.2,12.2-68.4,0L150.7,520.3c-21.2-12.2-34.2-34.8-34.2-59.2V258.9C116.5,234.5,129.5,211.9,150.7,199.7z"/>
+	<g display="inline">
+		
+			<path fill="none" stroke="#E5007E" stroke-width="5.6366" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="30.3912,30.3912" d="
+			M119.9,176.1l200.9-116c24.3-14,54.2-14,78.4,0l200.9,116c24.3,14,39.2,39.9,39.2,67.9V476c0,28-14.9,53.9-39.2,67.9l-200.9,116
+			c-24.3,14-54.2,14-78.4,0l-200.9-116c-24.3-14-39.2-39.9-39.2-67.9V244C80.7,216,95.7,190.1,119.9,176.1z"/>
+	</g>
+	<g display="inline">
+		<rect x="185.5" y="234.9" fill="none" width="349.2" height="374.6"/>
+		<text transform="matrix(1 0 0 1 185.5122 281.8653)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'DINRoundPro-Bold'" font-size="65.6412">ICON </tspan><tspan x="0" y="78.8" fill="#FFFFFF" font-family="'DINRoundPro-Bold'" font-size="65.6412">DESIGN </tspan><tspan x="0" y="157.5" fill="#FFFFFF" font-family="'DINRoundPro-Bold'" font-size="65.6412">SAFE ZONE</tspan><tspan x="0" y="200.7" font-family="'DINRoundPro-Bold'" font-size="36">hide it for submis</tspan><tspan x="285.3" y="200.7" font-family="'DINRoundPro-Bold'" font-size="36">-</tspan><tspan x="0" y="243.9" font-family="'DINRoundPro-Bold'" font-size="36">sion</tspan></text>
+	</g>
+</g>
+<g id="DROP_SHADOW">
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1214.5699" y1="876.4525" x2="146.84" y2="253.0866">
+			<stop  offset="0" style="stop-color:#FFFFFF"/>
+			<stop  offset="1" style="stop-color:#8C8C8C"/>
+		</linearGradient>
+		<path opacity="0.35" fill="url(#SVGID_1_)" d="M683.1,494V269.3l-98.9-54.4H134.4v327.9l280.5,158.6l222.6-128.5
+			C665.7,556.5,683.1,526.5,683.1,494z"/>
+	</g>
+</g>
+<g id="INFOS_x5F_SHADOWS" display="none">
+	<circle display="inline" fill="none" stroke="#93278F" stroke-width="5" stroke-miterlimit="10" cx="134.3" cy="215" r="20.3"/>
+	<circle display="inline" fill="none" stroke="#93278F" stroke-width="5" stroke-miterlimit="10" cx="584.3" cy="215" r="20.3"/>
+	<circle display="inline" fill="none" stroke="#93278F" stroke-width="5" stroke-miterlimit="10" cx="683.3" cy="269" r="20.3"/>
+	<circle display="inline" fill="none" stroke="#93278F" stroke-width="5" stroke-miterlimit="10" cx="415.3" cy="701" r="20.3"/>
+	<circle display="inline" fill="none" stroke="#93278F" stroke-width="5" stroke-miterlimit="10" cx="134.4" cy="542.7" r="20.3"/>
+	<g display="inline">
+		<g>
+			
+				<line fill="none" stroke="#93278F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" x1="134.4" y1="542.7" x2="139.6" y2="545.7"/>
+			
+				<line fill="none" stroke="#93278F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12.4098,12.4098" x1="150.4" y1="551.8" x2="404.3" y2="695.3"/>
+			
+				<line fill="none" stroke="#93278F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" x1="409.7" y1="698.4" x2="414.9" y2="701.3"/>
+		</g>
+	</g>
+	<g display="inline">
+		<g>
+			
+				<line fill="none" stroke="#93278F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" x1="683.1" y1="269.3" x2="677.8" y2="266.4"/>
+			
+				<line fill="none" stroke="#93278F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="11.2101,11.2101" x1="668" y1="261" x2="594.3" y2="220.4"/>
+			
+				<line fill="none" stroke="#93278F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" x1="589.4" y1="217.7" x2="584.2" y2="214.8"/>
+		</g>
+	</g>
+	<g display="inline">
+		<rect x="185.5" y="260.8" fill="none" width="349.2" height="374.6"/>
+		<text transform="matrix(1 0 0 1 185.5122 290.8801)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'DINRoundPro-Bold'" font-size="42">EDIT THE PURPLE </tspan><tspan x="0" y="50.4" fill="#FFFFFF" font-family="'DINRoundPro-Bold'" font-size="42">POINTS TO AJUST </tspan><tspan x="0" y="100.8" fill="#FFFFFF" font-family="'DINRoundPro-Bold'" font-size="42">THE SHADOW TO </tspan><tspan x="0" y="151.2" fill="#FFFFFF" font-family="'DINRoundPro-Bold'" font-size="42">THE ICON</tspan><tspan x="0" y="194.4" font-family="'DINRoundPro-Bold'" font-size="36">always respect  </tspan><tspan x="0" y="237.6" font-family="'DINRoundPro-Bold'" font-size="36">the purple angles</tspan></text>
+	</g>
+</g>
+<g id="APP_x5F_ICON">
+	<g>
+		<g>
+			<g>
+				<g>
+					<rect x="134.4" y="214.8" fill="#737373" width="455.5" height="333.7"/>
+				</g>
+			</g>
+			<g>
+				<g>
+					<rect x="128.6" y="209" fill="#DCE1E4" width="455.5" height="333.7"/>
+				</g>
+				<rect x="128.6" y="209" fill="#EAF0F3" width="225.4" height="333.7"/>
+			</g>
+			<g>
+				<polygon fill="#F5F8F9" points="356.4,542.7 168.7,482.6 168.7,148.9 356.4,209 				"/>
+				<polygon fill="#FFFFFF" points="356.4,209 356.4,542.7 544.1,482.6 544.1,148.9 				"/>
+			</g>
+		</g>
+		<ellipse fill="#E5007E" cx="461.3" cy="292.3" rx="35.9" ry="50.7"/>
+		<ellipse fill="#009EE2" cx="413.8" cy="410.8" rx="21.5" ry="30.3"/>
+		<ellipse fill="#93C01F" cx="488.3" cy="433.4" rx="13.2" ry="18.6"/>
+		<polygon fill="#981A80" points="330.3,284.2 218.3,245.9 218.3,220 330.3,258.3 		"/>
+		
+			<rect x="224.5" y="333.8" transform="matrix(-0.2243 -0.9745 0.9745 -0.2243 -42.3335 697.504)" fill="#F08B74" width="63.8" height="63.6"/>
+		<polygon fill="#000E1F" points="288,437.7 283.2,484.4 331.8,462.6 		"/>
+	</g>
+</g>
+</svg>
